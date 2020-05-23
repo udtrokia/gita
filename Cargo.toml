@@ -1,0 +1,18 @@
+[package]
+name = "gita"
+version = "0.0.1"
+authors = ["clearloop <udtrokia@gmail.com>"]
+edition = "2018"
+description = "git2 shortcuts"
+repository = "https://github.com/clearloop/gita"
+license = "MIT"
+documentation = "https://docs.rs/gita"
+homepage = "https://github.com/clearloop/gita"
+include = ["src/**/*", "Cargo.toml", "./README.md"]
+keywords = ["git"]
+readme = './README.md'
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+git2 = "0.13.6"
