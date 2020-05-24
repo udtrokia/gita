@@ -1,9 +1,9 @@
 [package]
 name = "gita"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["clearloop <udtrokia@gmail.com>"]
 edition = "2018"
-description = "git2 shortcuts"
+description = "git2-rs is hard to use"
 repository = "https://github.com/clearloop/gita"
 license = "MIT"
 documentation = "https://docs.rs/gita"

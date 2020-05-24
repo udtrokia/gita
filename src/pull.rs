@@ -14,6 +14,7 @@
 use git2::Repository;
 use std::{
     io::{self, Write},
+    path::PathBuf,
     str,
 };
 
@@ -185,8 +186,9 @@ fn do_merge<'a>(
 }
 
 /// `git pull`
-pub fn pull(repo: &Repository, remote: &str, branch: &str) -> Result<(), git2::Error> {
-    let mut remote_branch = repo.find_remote(remote)?;
-    let fetch_commit = do_fetch(&repo, &[branch], &mut remote_branch)?;
-    do_merge(repo, remote, fetch_commit)
+pub fn pull(repo: &PathBuf, remote: &str, branch: &str) -> Result<(), git2::Error> {
+    let git_repo = Repository::open(repo.clone())?;
+    let mut remote_branch = git_repo.find_remote(remote)?;
+    let fetch_commit = do_fetch(&git_repo, &[branch], &mut remote_branch)?;
+    do_merge(&git_repo, remote, fetch_commit)
 }
