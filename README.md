@@ -1,14 +1,16 @@
-# gita
+# Gita
 
-git2-rs is hard to use
+`git` external usages
 
-## pull
+## epoch [commit]
 
 ```
-fn main() {
-    gita::pull("my_git_repo", "origin", "master");
-}
+git epoch [commit]
 ```
 
-### LICENSE
+Get timestamp of commit from epoch
+
+
+## LICENSE
+
 CC0 1.0 Universal

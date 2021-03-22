@@ -1,4 +1,3 @@
-mod pull;
+mod epoch;
 
-pub use self::pull::pull;
-pub use git2;
+pub use epoch::epoch;
